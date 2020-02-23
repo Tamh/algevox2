@@ -1,0 +1,16 @@
+#JSGF V1.0;
+
+/**
+ * Gramática JSGF para AlgeVox - Modo de Control
+ */
+
+grammar control;
+
+<pausar>   = PAUSAR [ MICROFONO ] ;
+<nuevaexp> = NUEVA [ EXPRESION ] ;
+<mododict> = MODO DICTADO ;
+<salir>    = SALIR [ DE LA APLICACION | DE ALGEVOX ] ;
+<copiar>   = COPIAR [ CODIGO | IMAGEN | MATHML ] ;
+
+// Gramática para el control del sistema.
+public <control> = /10/ <pausar> | /4/ <nuevaexp> | /10/ <mododict> | /1/ <salir> | /4/ <copiar> ;

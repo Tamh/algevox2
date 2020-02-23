@@ -1,0 +1,35 @@
+#JSGF V1.0;
+
+grammar matesletras;
+
+import <matesgriegas.*>;
+
+<letrasa> = ANA | ANDRES ;
+<letrasb> = BELEN | BETO ;
+<letrasc> = CESAR | CECILIA ;
+<letrasd> = DELIA | DELFIN ;
+<letrase> = EDUARDO | ESTELA ;
+<letrasf> = FELIPE | FERNANDO | FLORA | EFESIO ;
+<letrasg> = GEMA | GERMAN ;
+<letrash> = HACHE ;
+<letrasi> = INES | IVAN ;
+<letrasj> = JOTA | JUAN | JUANA ;
+<letrask> = KAREN | KEVIN | KATERIN | KATERINE ;
+<letrasl> = LEIDY | LEON | LUIS | ELENA ;
+<letrasm> = MARIA | MARIO | EMETERIO ;
+<letrasn> = NATALIA | NELSON | ENEAS ;
+<letraso> = OLGA | OMAR ;
+<letrasp> = PAOLA | PAULA | PEDRO | PABLO ;
+<letrasq> = QUETZAL | QUESO | CURTIS ;
+<letrasr> = RENE | REINA ;
+<letrass> = SELENE | SERGIO | SEBASTIAN | EZEQUIEL ;
+<letrast> = TERESA | TEODORO ;
+<letrasu> = URSULA | URIEL ;
+<letrasv> = VERONICA | VENECIA ;
+<letrasw> = DOBLEU | DOBLEVE | DOBLEUVE ;
+<letrasx> = EQUIS ;
+<letrasy> = YESICA | YURI ;
+<letrasz> = ZETA ;
+<consteu> = EULER ;
+
+public <letras> = <letrasa> | <letrasb> | <letrasc> | <letrasd> | <letrase> | <letrasf> | <letrasg> | <letrash> | <letrasi> | <letrasj> | <letrask> | <letrasl> | <letrasm> | <letrasn> | <letraso> | <letrasp> | <letrasq> | <letrasr> | <letrass> | <letrast> | <letrasu> | <letrasv> | <letrasw> | <letrasx> | <letrasy> | <letrasz> | <griegas> | <consteu> ;

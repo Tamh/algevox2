@@ -1,0 +1,31 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Hello World example
+ */
+
+grammar numeros;
+
+import <matesletras.*>;
+
+<cientos> = CIENTO | DOSCIENTOS | TRESCIENTOS | CUATROCIENTOS | QUINIENTOS | SEISCIENTOS | SETECIENTOS | OCHOCIENTOS | NOVECIENTOS ;
+
+<decenasmulti> = TREINTA | CUARENTA | CINCUENTA | SESENTA | SETENTA | OCHENTA | NOVENTA ;
+
+<unidades> = UN | UNO | DOS | TRES | CUATRO | CINCO | SEIS | SIETE | OCHO | NUEVE ;
+
+<decenasbasica> = ONCE | DOCE | TRECE | CATORCE | QUINCE | DIECISEIS | DIECISIETE | DIECIOCHO | DIECINUEVE | VEINTIUN | VEINTIUNO | VEINTIDOS | VEINTITRES | VEINTICUATRO | VEINTICINCO | VEINTISEIS | VEINTISIETE | VEINTIOCHO | VEINTINUEVE ;
+
+<numerospares> =  DIEZ | VEINTE | ( <decenasmulti> [ Y <unidades> ] ) | <unidades> | <decenasbasica> ;
+
+<numerosbloque> = CERO | CIEN | ( [ <cientos> ] [ <numerospares> ] ) ;
+
+<operadores> = MAS | MENOS | POR | VECES | DIVIDIDO | SOBRE | RAIZ [ CUADRADA | CUBICA ] | A LA | ALA | ELEVADO A | MAS O MENOS | MASMENOS | MENOS O MAS | MENOSMAS | IGUAL | FRACCION | FIN | DE | AL ( CUADRADO | CUBO ) ;
+
+<parentesis> = [ ABRIR | ABRE ] ( PARENTESIS | CORCHETES | LLAVES ) | CERRAR ;
+
+// Prueba preliminar de reconocimiento de voz con modelo solo VoxForge y gramática de números enteros del cero al 999, con decimales dictados
+// por cifras separadas o dobles.
+<numeros> = <numerosbloque> [ ( PUNTO | COMA ) ( CERO | <numerospares> )+ ] | <letras> ;
+
+public <dictado> = <numeros> | <operadores> | <parentesis> | MODO CONTROL | PAUSAR [ MICROFONO ] | DESHACER  ;

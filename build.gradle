@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+}
+
+group 'org.hitcombo'
+version '0.1-SNAPSHOT'
+
+sourceCompatibility = 11
+
+repositories {
+    mavenCentral()
+    // Maven repository for the University of Edinburgh, School of Physics and Astronomy
+    maven {
+        url "https://www2.ph.ed.ac.uk/maven2"
+    }
+    // Maven repository for Sonatype
+    maven {
+        url "https://oss.sonatype.org/content/repositories/snapshots"
+    }
+    // Repository for the local libraries, specifically the acoustic model
+    flatDir {
+        dirs 'lib'
+    }
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.scilab.forge/jlatexmath
+    compile group: 'org.scilab.forge', name: 'jlatexmath', version: '1.0.7'
+    // https://mvnrepository.com/artifact/uk.ac.ed.ph.snuggletex/snuggletex-core
+    compile group: 'uk.ac.ed.ph.snuggletex', name: 'snuggletex-core', version: '1.2.2'
+    // Sphinx 4 repo
+    // compile group: 'edu.cmu.sphinx', name: 'sphinx4-core', version:'5prealpha-SNAPSHOT'
+    // compile group: 'edu.cmu.sphinx', name: 'sphinx4-data', version:'5prealpha-SNAPSHOT'
+
+    // Acoustic model for Spanish v20101005
+    implementation name: 'voxforge_20101005_8g'
+    // JSAPI from https://sourceforge.net/projects/jsapi/
+    implementation name: 'jsr113'
+    // TODO: Temporary use of the Sphinx4 JAR from back in 2010
+    implementation name: 'sphinx4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

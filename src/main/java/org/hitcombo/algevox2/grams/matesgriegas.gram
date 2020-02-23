@@ -1,0 +1,32 @@
+#JSGF V1.0;
+
+grammar matesgriegas;
+
+<gralfa> = ALFA | ALFA GRIEGA ;
+<grbeta> = BETA | BETA GRIEGA ;
+<grgama> = GAMA | GAMA GRIEGA ;
+<grdelta> = DELTA | DELTA GRIEGA ;
+<grepsilon> = EPSILON | EPSILON GRIEGA ;
+<grzeta> = ZETA GRIEGA ;
+<greta> = ETA GRIEGA ;
+<grtheta> = THETA | THETA GRIEGA ;
+<griota> = IOTA | IOTA GRIEGA ;
+<grkappa> = KAPPA | KAPPA GRIEGA ;
+<grlambda> = LAMBDA | LAMBDA GRIEGA ;
+<grmu> = MU | MU GRIEGA ;
+<grnu> = NU GRIEGA ;
+<grcsi> = CSI GRIEGA ;
+<gromicron> = OMICRON | OMICRON GRIEGA ;
+<grpi> = PI | NUMERO PI | PI GRIEGA | PIEDRA ;
+<grrho> = RHO GRIEGA ;
+<grsigma> = SIGMA | SIGMA GRIEGA ;
+<grtau> = TAU GRIEGA ;
+<grupsilon> = UPSILON | UPSILON GRIEGA ;
+<grfi> = FI GRIEGA ;
+<grchi> = CHI GRIEGA ;
+<grpsi> = PSI GRIEGA ;
+<gromega> = OMEGA | OMEGA GRIEGA ;
+
+<letrasgr> = <gralfa> | <grbeta> | <grgama> | <grdelta> | <grepsilon> | <grzeta> | <greta> | <grtheta> | <griota> | <grkappa> | <grlambda> | <grmu> | <grnu> | <grcsi> | <gromicron> | <grpi> | <grrho> | <grsigma> | <grtau> | <grupsilon> | <grfi> | <grchi> | <grpsi> | <gromega> ;
+
+public <griegas> = <letrasgr> [ MAYUSCULA ];
